@@ -3,12 +3,28 @@ layout: default
 title: About
 ---
 
-## About
+<section>
+  <h2>About</h2>
 
-Subrat Kumar Dang is a doctoral researcher in the **Mechanical and Industrial Engineering Department (MIED), Indian Institute of Technology Roorkee**, under the supervision of **Dr. Vidit Gaur**. His work focuses on the development of **advanced artificial intelligence methodologies for materials discovery**, with particular emphasis on integrating **physics-informed learning**, **large-scale multimodal models**, and **agentic AI frameworks** to support the design and analysis of high-performance materials.
+  <p class="lead">
+    Subrat Kumar Dang is a doctoral researcher in the Mechanical and Industrial Engineering 
+    Department (MIED) at the Indian Institute of Technology Roorkee, supervised by Dr. Vidit Gaur.
+    His work focuses on advanced artificial intelligence methodologies for accelerated materials 
+    discovery, with emphasis on physics-informed learning, multimodal representations, and 
+    agentic AI frameworks.
+  </p>
 
-His research is motivated by the need for computational approaches capable of systematically exploring complex design spaces, improving predictive reliability, and enabling accelerated decision-making in materials engineering. He is particularly interested in methods that unify data-driven modeling with materials domain knowledge to produce interpretable and scientifically grounded outcomes.
+  <p>
+    His research aims to integrate data-driven modeling with materials domain knowledge to enable 
+    interpretable and computationally reliable design pipelines for high-performance materials.
+    Prior to joining IIT Roorkee, he contributed to research activities at the Bremen Institute for 
+    Production and Logistics (BIBA), University of Bremen, focusing on intelligent systems and 
+    digital manufacturing.
+  </p>
 
-Prior to joining IIT Roorkee, he contributed to research and development activities at the **Bremen Institute for Production and Logistics (BIBA), University of Bremen**, where he worked on international and national projects in digital manufacturing and intelligent systems. His previous training includes an **M.Tech in Mechanical Engineering** from **SLIET, India**.
-
-Subrat intends to pursue an academic career and is committed to conducting rigorous research, mentoring students, and contributing to the advancement of computational and AI-driven approaches in materials science.
+  <p>
+    He holds an M.Tech in Mechanical Engineering from SLIET, India, and intends to pursue an 
+    academic career dedicated to advancing computational and AI-assisted approaches in materials 
+    science.
+  </p>
+</section>
