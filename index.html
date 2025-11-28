@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Subrat Dang — PhD Candidate | Materials Science</title>
+  <meta name="description" content="Subrat Dang — PhD Candidate. Research: AI for Materials Discovery. Aspiring Assistant Professor." />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0f172a; --muted:#6b7280; --accent:#0ea5a4;
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:var(--bg); line-height:1.5}
+    a{color:var(--accent); text-decoration:none}
+    header{border-bottom:1px solid #eef2f7; position:sticky; top:0; background:var(--bg); z-index:20}
+    .container{max-width:var(--maxw); margin:0 auto; padding:28px}
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{font-weight:700; letter-spacing:0.2px}
+    .navlinks{display:flex; gap:14px; font-size:14px; color:var(--muted)}
+    .hero{display:grid; grid-template-columns: 1fr 360px; gap:28px; align-items:center; padding:36px 0}
+    .hero-left h1{margin:0; font-size:28px}
+    .tag{color:var(--muted); margin-top:6px}
+    .cta{margin-top:16px; display:flex; gap:10px}
+    .btn{padding:10px 14px; border-radius:8px; font-weight:600; border:1px solid rgba(14,165,164,0.12); background:transparent; cursor:pointer;}
+    .btn-solid{background:var(--accent); color:white; border:none}
+    .card{border:1px solid #eef2f7; padding:18px; border-radius:10px; background:#fff}
+    .headshot{width:120px; height:120px; border-radius:12px; object-fit:cover; display:block; margin-left:auto}
+    section{padding:32px 0; border-bottom:1px solid #f3f6f8}
+    h2{font-size:18px; margin:0 0 10px 0}
+    p.lead{color:var(--muted); margin:0 0 8px 0}
+    .grid-3{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+    .project-card{padding:14px; border-radius:10px; background:#fff; border:1px solid #f1f5f9}
+    footer{padding:28px 0; color:var(--muted); font-size:14px; text-align:center}
+    /* small screens */
+    @media (max-width:840px){
+      .hero{grid-template-columns:1fr; text-align:left}
+      .headshot{width:100px;height:100px}
+      .navlinks{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Subrat Dang</div>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero" id="home">
+        <div class="hero-left">
+          <h1>Subrat Dang <span style="font-weight:400">— PhD Candidate, Materials Science</span></h1>
+          <div class="tag">Research: AI for Materials Discovery · Physics-informed ML · Superalloys</div>
+          <p class="lead" style="margin-top:12px">I develop machine learning methods and computational pipelines to accelerate materials discovery. My goal is to pursue an academic career as an Assistant Professor.</p>
+          <div class="cta">
+            <a class="btn btn-solid" href="/assets/Subrat_Dang_CV.pdf" download>Download CV</a>
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn" href="https://scholar.google.com" target="_blank">View on Google Scholar</a>
+          </div>
+        </div>
+
+        <div class="card" aria-hidden="true">
+          <!-- Replace src with your headshot (square or rounded) -->
+          <img class="headshot" src="https://via.placeholder.com/240?text=Headshot" alt="Subrat Dang — headshot">
+          <div style="margin-top:12px">
+            <div style="font-weight:700">Subrat Dang</div>
+            <div style="color:var(--muted)">PhD Candidate — Dept, University</div>
+            <div style="margin-top:8px; color:var(--muted); font-size:13px">Email: <a href="mailto:youremail@university.edu">youremail@university.edu</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <h2>About</h2>
+        <p class="lead">I am a PhD candidate working on integrating machine learning with physics-based models to design and discover advanced materials. I am passionate about building reproducible research, open-source tools, and teaching.</p>
+        <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn" href="#research">Research</a>
+          <a class="btn" href="#publications">Publications</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section id="research">
+        <h2>Research</h2>
+        <p class="lead">My work sits at the intersection of materials science and machine learning. Key areas:</p>
+        <div class="grid-3" style="margin-top:12px">
+          <div class="project-card">
+            <strong>AI-driven Materials Discovery</strong>
+            <p class="lead" style="margin:6px 0 0">Developing surrogate models and active learning loops for accelerated screening.</p>
+          </div>
+          <div class="project-card">
+            <strong>Physics-informed ML</strong>
+            <p class="lead" style="margin:6px 0 0">Embedding conservation laws into network architectures to improve generalization.</p>
+          </div>
+          <div class="project-card">
+            <strong>Superalloys & Microstructure</strong>
+            <p class="lead" style="margin:6px 0 0">Modeling microstructural evolution and property prediction with graph methods.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <p class="lead">Selected projects — click to open repo or project page.</p>
+        <div class="grid-3" style="margin-top:12px">
+          <a class="project-card" href="https://github.com/Dang1994/project-1" target="_blank">
+            <strong>Project One — Materials surrogate</strong>
+            <p class="lead" style="margin:6px 0 0">Surrogate model + active learning loop. (code · paper)</p>
+          </a>
+          <a class="project-card" href="https://github.com/Dang1994/project-2" target="_blank">
+            <strong>Project Two — Physics-informed PINN</strong>
+            <p class="lead" style="margin:6px 0 0">PINN for diffusion processes (demo · slides)</p>
+          </a>
+          <a class="project-card" href="https://github.com/Dang1994/project-3" target="_blank">
+            <strong>Project Three — Microstructure GNN</strong>
+            <p class="lead" style="margin:6px 0 0">GNN for microstructure-property mapping (code)</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications">
+        <h2>Publications</h2>
+        <p class="lead">Peer-reviewed papers and preprints (reverse-chronological). Click to view DOI / PDF.</p>
+        <ul style="margin-top:12px; padding-left:18px; color:var(--muted)">
+          <li><strong>Author A</strong>, Subrat D., <em>Title of Paper</em>. Journal, 2025. <a href="#" target="_blank">DOI</a></li>
+          <li><strong>Author B</strong>, Subrat D., <em>Another Paper</em>. Conf, 2024. <a href="#" target="_blank">PDF</a></li>
+        </ul>
+      </section>
+
+      <!-- News -->
+      <section id="news">
+        <h2>News & Updates</h2>
+        <p class="lead">Quick announcements & selected talks.</p>
+        <ul style="margin-top:12px; padding-left:18px; color:var(--muted)">
+          <li><strong>Nov 2025</strong> — Accepted to XYZ conference. <a href="#">More</a></li>
+          <li><strong>Aug 2025</strong> — Released project-1 code on GitHub. <a href="#">Repo</a></li>
+        </ul>
+      </section>
+
+      <!-- Academic Service -->
+      <section id="service">
+        <h2>Academic Service</h2>
+        <p class="lead">Reviewer for journals and program committees.</p>
+        <ul style="margin-top:12px; padding-left:18px; color:var(--muted)">
+          <li>Journal A — Reviewer</li>
+          <li>Conference B — Program Committee</li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <p class="lead">Degrees, advisor, and thesis</p>
+        <ul style="margin-top:12px; padding-left:18px; color:var(--muted)">
+          <li>PhD (ongoing) — Department, University — Advisor: Prof. X</li>
+          <li>MSc — University Y — Year</li>
+        </ul>
+      </section>
+
+      <!-- Collaboration -->
+      <section id="collab">
+        <h2>Collaboration</h2>
+        <p class="lead">Open to collaborations in ML for materials, interpretable models, and student supervision.</p>
+        <p style="margin-top:8px"><em>Examples:</em> Prof. A (University), Lab B (Industry)</p>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="lead">For collaborations, postdoc/visiting positions, or questions about my work, email me:</p>
+        <p style="margin-top:8px"><strong>Email:</strong> <a href="mailto:youremail@university.edu">youremail@university.edu</a></p>
+        <p style="margin-top:8px">Profiles: <a href="https://scholar.google.com" target="_blank">Google Scholar</a> · <a href="https://github.com/Dang1994" target="_blank">GitHub</a> · <a href="#" target="_blank">ORCID</a></p>
+      </section>
+
+      <footer>
+        <div class="container">© <span id="yr"></span> Subrat Dang · PhD Candidate · <a href="https://github.com/Dang1994/subratdang" target="_blank">Source</a></div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // small helpers
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
