@@ -1,0 +1,11 @@
+title: "Subrat Kumar Dang"
+email: "w.subrat@gmail.com"
+description: "PhD Candidate — AI for Materials Discovery. Aspiring Assistant Professor."
+baseurl: "" # if hosted at https://dang1994.github.io/subratdang set '/subratdang' else leave empty
+url: "https://dang1994.github.io" # change if you rename username or use custom domain
+
+
+theme: "jekyll-theme-minimal"
+
+
+# collections, plugins etc can be added later
