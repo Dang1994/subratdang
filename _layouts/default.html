@@ -1,24 +1,111 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>{{ page.title | default: site.title }}</title>
-<meta name="description" content="{{ page.description | default: site.description }}" />
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
+  <!-- Favicon(s) -->
+  <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}" />
+  <meta name="theme-color" content="#0ea5a4" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description }}" />
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{{ page.og_image | default: site.url | append: '/assets/img/headshot.jpg' }}" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="{{ site.twitter | default: '' }}" />
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+  <meta name="twitter:description" content="{{ page.description | default: site.description }}" />
+  <meta name="twitter:image" content="{{ page.og_image | default: site.url | append: '/assets/img/headshot.jpg' }}" />
+
+  <!-- RSS / Atom -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
+
+  <!-- Performance: preconnect & fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+
+  <!-- JSON-LD Person schema (edit fields as needed) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.title }}",
+    "jobTitle": "PhD Candidate",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "{{ site.institution | default: 'IIT Roorkee' }}"
+    },
+    "url": "{{ site.url | default: '' }}",
+    "sameAs": [
+      "{{ site.github | default: '' }}",
+      "{{ site.scholar | default: '' }}",
+      "{{ site.linkedin | default: '' }}"
+    ]
+  }
+  </script>
+
+  <!-- Optional per-page head injections -->
+  {{ content_for_head }}
+
 </head>
-<body>
-{% include header.html %}
+<body class="site-body">
 
+  <!-- Skip to content (accessibility) -->
+  <a class="skip-link" href="#content" style="position:absolute;left:-999px;top:auto;clip:rect(0 0 0 0);height:1px;overflow:hidden;">
+    Skip to content
+  </a>
 
-<main>
-<div class="container">
-{{ content }}
-</div>
-</main>
+  {% include header.html %}
 
+  <main id="content" role="main" aria-labelledby="main-title">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
 
-{% include footer.html %}
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+  {% include footer.html %}
+
+  <!-- Minimal scripts: deferred for performance -->
+  <script defer>
+    // small helper: mobile nav toggle (header include should add #nav-toggle button & .nav-links)
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const links = document.querySelector('.navlinks');
+      if (!btn || !links) return;
+      btn.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        links.classList.toggle('open');
+      });
+    })();
+  </script>
+
+  <!-- noscript fallback -->
+  <noscript>
+    <style>
+      .navlinks { display:block !important; }
+    </style>
+    <div style="background:#fff3; padding:8px; text-align:center; font-size:13px;">
+      JavaScript is disabled — some interactive features may not work.
+    </div>
+  </noscript>
+
 </body>
 </html>

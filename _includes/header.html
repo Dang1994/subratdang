@@ -1,19 +1,30 @@
 <header>
-<div class="container">
-<nav>
-<div class="brand"><a href="{{ '/' | relative_url }}">Subrat Dang</a></div>
-<div class="navlinks">
-<a href="{{ '/index.html' | relative_url }}">Home</a>
-<a href="{{ '/about.html' | relative_url }}">About</a>
-<a href="{{ '/research.html' | relative_url }}">Research</a>
-<a href="{{ '/projects.html' | relative_url }}">Projects</a>
-<a href="{{ '/publications.html' | relative_url }}">Publications</a>
-<a href="{{ '/news.html' | relative_url }}">News</a>
-<a href="{{ '/service.html' | relative_url }}">Academic Service</a>
-<a href="{{ '/education.html' | relative_url }}">Education</a>
-<a href="{{ '/collaboration.html' | relative_url }}">Collaboration</a>
-<a href="{{ '/contact.html' | relative_url }}">Contact</a>
-</div>
-</nav>
-</div>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <a href="{{ '/' | relative_url }}"><span class="accent">Subrat</span> Dang</a>
+      </div>
+
+      <!-- mobile toggle -->
+      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- simple hamburger icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div id="main-nav" class="navlinks" role="navigation" aria-label="Primary">
+        <a href="{{ '/index.html' | relative_url }}">Home</a>
+        <a href="{{ '/about.html' | relative_url }}">About</a>
+        <a href="{{ '/research.html' | relative_url }}">Research</a>
+        <a href="{{ '/projects.html' | relative_url }}">Projects</a>
+        <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+        <a href="{{ '/news.html' | relative_url }}">News</a>
+        <a href="{{ '/service.html' | relative_url }}">Academic Service</a>
+        <a href="{{ '/education.html' | relative_url }}">Education</a>
+        <a href="{{ '/collaboration.html' | relative_url }}">Collaboration</a>
+        <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+      </div>
+    </nav>
+  </div>
 </header>
