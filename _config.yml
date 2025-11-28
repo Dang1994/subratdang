@@ -14,7 +14,7 @@ url: "https://dang1994.github.io" # change if you rename username or use a custo
 theme: "jekyll-theme-minimal"     # you can switch to a custom theme or remote_theme later
 permalink: pretty                 # /about/ instead of /about.html
 
-# Plugins (these are supported on GitHub Pages)
+# Plugins (supported on GitHub Pages)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -39,7 +39,7 @@ collections:
     output: true
     permalink: /publications/:name/
 
-# Defaults: use the default layout for pages & posts
+# Defaults: use the default layout for pages, posts and collections
 defaults:
   - scope:
       path: ""                      # empty string means all files
@@ -64,11 +64,9 @@ exclude:
   - "vendor/bundle"
   - "Gemfile"
   - "Gemfile.lock"
-  - "README.md"
 
 # Files/paths to include (force include)
 include:
-  - "_pages"                       # if you decide to use a pages folder
   - "assets/Subrat_Dang_CV.pdf"
 
 # Social / contact (for templates & JSON-LD)
@@ -87,10 +85,7 @@ analytics:
 future: true                       # allow posts with future dates to be published locally (GitHub ignores future)
 safe: true
 
-# Enable incremental build locally (do NOT commit this if you want stable builds)
-# incremental: true
-
 # Notes:
 # 1) When you rename your GitHub username to `subratdang` or switch to a custom domain, update `url` and `baseurl`.
-# 2) _If_ you want to use jekyll-seo-tag fully, include `{% seo %}` or related tags in your _layouts/default.html.
-# 3) Collections (projects/publications) let you keep each item as a markdown file in _projects/ and _publications/ — they will render automatically.
+# 2) To enable full SEO output add {% seo %} to your _layouts/default.html (jekyll-seo-tag required).
+# 3) Collections (projects/publications) let you keep items as markdown files in _projects/ and _publications/.
